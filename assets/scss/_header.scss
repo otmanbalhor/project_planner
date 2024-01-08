@@ -1,0 +1,26 @@
+
+
+body{
+
+    height: 100vh;
+    margin: auto;
+
+    .header{
+
+        &__nav{
+            background-color: black;
+            height: 5vh;
+            max-height: 40px;
+        }
+
+        &__haut{
+            display: flex;
+            justify-content: center;
+            &__titre{
+
+            }
+
+        }
+    }
+
+}

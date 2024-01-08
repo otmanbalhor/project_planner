@@ -3,25 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/scss/style.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav>
-
+    <header class="header">
+        <nav class="header__nav">
+            
         </nav>
 
-        <div class="div">
-            <h1>Project planner</h1>
+        <div class="header__haut">
+            <h1 class="header__haut__titre">Project planner</h1>
         </div>
     </header>
 
     <main class="container">
+        <div class="container__tri">
+            <button type="button" class="container__tri__btn">All</button>
+            <button type="button" class="container__tri__btn">To do</button>
+            <button type="button" class="container__tri__btn">In progress</button>
+            <button type="button" class="container__tri__btn">Done</button>
+        </div>
+
         <article class="container__article">
-            <section class="container__article__card"></section>
-            <section class="container__article__card"></section>
-            <section class="container__article__card"></section>
+            <section class="container__article__card">
+                <div class="container__article__card__haut">
+                    <h2 class="container__article__card__haut__titre">To do</h2>
+                    <input class="container__article__card__haut__input" type="checkbox">
+                </div>
+                <div>
+                    <p></p>
+                    <input type="date" name="papa" id="">
+                </div>
+            </section>
+            <section class="container__article__card">
+                <div class="container__article__card__haut">
+                    <h2 class="container__article__card__haut__titre">In progress</h2>
+                    <input class="container__article__card__haut__input2" type="checkbox"> 
+                </div>
+            </section>
+            <section class="container__article__card">
+                <div class="container__article__card__haut">
+                   <h2 class="container__article__card__haut__titre">Done</h2> 
+                   <input class="container__article__card__haut__input" type="checkbox"> 
+                </div>
+                
+            </section>
         </article>
     </main>
+
 </body>
 </html>
