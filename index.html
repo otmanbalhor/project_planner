@@ -31,9 +31,13 @@
                     <h2 class="container__article__card__haut__titre">To do</h2>
                     <input class="container__article__card__haut__input" type="checkbox">
                 </div>
-                <div>
-                    <p></p>
-                    <input type="date" name="papa" id="">
+                <div class="container__article__card__inputs">
+                    <label>Select a date please:</label>
+                    <input type="datetime-local" name="date" id="date">
+                    <label>Add a task:</label>
+                    <input type="text" id="text" name="text" placeholder="Add a task..." required minlength="3" maxlength="256"/>
+                    <label>Description:</label>
+                    <input type="text" id="description" name="description" placeholder="Describe your task..." required minlength="5" maxlength="1024"/>
                 </div>
             </section>
             <section class="container__article__card">

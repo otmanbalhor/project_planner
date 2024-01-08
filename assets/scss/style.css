@@ -39,6 +39,12 @@ body .container__article__card {
   background-color: blue;
   height: 100%;
 }
+body .container__article__card__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
 body .container__article__card__haut {
   display: flex;
 }
