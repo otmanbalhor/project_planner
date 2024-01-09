@@ -8,8 +8,8 @@
 </head>
 <body>
     <header class="header">
-        <nav class="header__nav">
-            
+        <nav id="nav" class="header__nav">
+           
         </nav>
 
         <div class="header__haut">
@@ -29,32 +29,46 @@
             <section class="container__article__card">
                 <div class="container__article__card__haut">
                     <h2 class="container__article__card__haut__titre">To do</h2>
-                    <input class="container__article__card__haut__input" type="checkbox">
+                    <input id="task" class="container__article__card__haut__input" type="checkbox"> 
                 </div>
-                <div class="container__article__card__inputs">
-                    <label>Select a date please:</label>
+                <div class="container__article__card__dropzone" id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p class="container__article__card__drop__drophere">Drop your file here</p>
+                </div>
+                <div id="inputs" class="container__article__card__inputs" draggable="true" ondragstart="drag(event)">
+                    <label id="pdate">Select a date please:</label>
                     <input type="datetime-local" name="date" id="date">
-                    <label>Add a task:</label>
+                    <label id="ptext">Add a task:</label>
                     <input type="text" id="text" name="text" placeholder="Add a task..." required minlength="3" maxlength="256"/>
-                    <label>Description:</label>
+                    <label id="pdescription">Description:</label>
                     <input type="text" id="description" name="description" placeholder="Describe your task..." required minlength="5" maxlength="1024"/>
+                </div>
+                <div class="container__article__card__add">
                 </div>
             </section>
             <section class="container__article__card">
                 <div class="container__article__card__haut">
-                    <h2 class="container__article__card__haut__titre">In progress</h2>
+                    <h2 class="container__article__card__haut__titre">Doing</h2>
                     <input class="container__article__card__haut__input2" type="checkbox"> 
                 </div>
+                <div class="container__article__card__dropzone" id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p class="container__article__card__drop__drophere">Drop your file here</p>
+                </div>
+                <p id="fileInfo"></p>
             </section>
             <section class="container__article__card">
                 <div class="container__article__card__haut">
                    <h2 class="container__article__card__haut__titre">Done</h2> 
                    <input class="container__article__card__haut__input" type="checkbox"> 
                 </div>
-                
+                <div class="container__article__card__dropzone" id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p class="container__article__card__drop__drophere">Drop your file here</p>
+                </div>
             </section>
         </article>
     </main>
+
+    <script type="module" defer src="assets/js/script.js"></script>
+    <script defer src="assets/js/drop.js"></script>
 
 </body>
 </html>
