@@ -60,6 +60,14 @@ body .container__article__card {
   height: 100%;
   box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.1);
 }
+body .container__article__card__dropzone {
+  margin-top: 5%;
+  margin-bottom: 7%;
+  margin-left: 7%;
+  margin-right: 7%;
+  border: dashed 2px #393E46;
+  text-align: center;
+}
 body .container__article__card__inputs {
   font-family: "Georgia";
   display: flex;
@@ -70,8 +78,12 @@ body .container__article__card__inputs {
   font-size: 12px;
   color: #393E46;
 }
-body .container__article__card__inputs input {
-  margin-right: 50px;
+body .container__article__card__inputs__grand {
+  padding-bottom: 25%;
+  margin-right: 18%;
+}
+body .container__article__card__inputs__petit {
+  margin-right: 18%;
 }
 body .container__article__card__haut {
   display: flex;
@@ -79,4 +91,61 @@ body .container__article__card__haut {
 body .container__article__card__haut__titre {
   text-align: center;
   width: 100%;
+}
+body .container__article__card__haut__input {
+  position: relative;
+  width: 304px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #34974d;
+  background-color: #3aa856;
+  margin-top: 14px;
+  margin-right: 43px;
+}
+body .container__article__card__haut__input:hover {
+  background: #34974d;
+}
+body .container__article__card__haut__input:active {
+  border: 1px solid #2e8644;
+}
+
+.container__article__card__haut__input, .container__article__card__haut__input__icon, .container__article__card__haut__input__text {
+  transition: all 0.3s;
+}
+
+.container__article__card__haut__input .container__article__card__haut__input__text {
+  transform: translateX(30px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.container__article__card__haut__input .container__article__card__haut__input__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 104%;
+  width: 39px;
+  background-color: #34974d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__article__card__haut__input .svg {
+  width: 30px;
+  stroke: #fff;
+}
+
+.container__article__card__haut__input:hover .container__article__card__haut__input__text {
+  color: transparent;
+}
+
+.container__article__card__haut__input:hover .container__article__card__haut__input__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.container__article__card__haut__input:active .container__article__card__haut__input__icon {
+  background-color: #2e8644;
 }/*# sourceMappingURL=style.css.map */

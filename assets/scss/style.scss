@@ -1,8 +1,6 @@
-
-
 @import './header.scss';
 
-body{
+body {
 
     background-color: #F9F7F7;
     font-family: 'Roboto', sans-serif;
@@ -10,16 +8,15 @@ body{
     text-transform: uppercase;
     color: #393E46;
 
-
-    .container{
+    .container {
 
         height: 100vh;
         width: 100%;
 
-        &__tri{
+        &__tri {
             display: flex;
             justify-content: center;
-            gap:15px;
+            gap: 15px;
             margin-bottom: 3%;
 
             &__btn {
@@ -34,15 +31,14 @@ body{
                 border-radius: 5px;
 
                 &:hover {
-                    background-color: #FF9800; 
+                    background-color: #FF9800;
                     transition: 0.2s;
                 }
             }
 
-
         }
 
-        &__article{
+        &__article {
 
             display: flex;
             flex-direction: row;
@@ -53,12 +49,21 @@ body{
             flex-wrap: wrap;
             gap: 15px;
 
-            &__card{
+            &__card {
                 width: 100%;
                 max-width: 300px;
                 background-color: #e0dcdc;
                 height: 100%;
-                box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.1);
+                box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.1);
+
+                &__dropzone {
+                    margin-top: 5%;
+                    margin-bottom: 7%;
+                    margin-left: 7%;
+                    margin-right: 7%;
+                    border: dashed 2px #393E46;
+                    text-align: center;
+                }
 
                 &__inputs {
                     font-family: "Georgia";
@@ -69,34 +74,91 @@ body{
                     padding-left: 20px;
                     font-size: 12px;
                     color: #393E46;
-                    // margin-right: 60px; dans enfant de inputs
-                    input {
-                        margin-right: 50px;
+
+                    &__grand {
+                        padding-bottom: 25%;
+                        margin-right: 18%;
+                    }
+
+                    &__petit {
+                        margin-right: 18%;
                     }
                 }
 
-                &__haut{
+                &__haut {
                     display: flex;
 
-                    &__titre{
+                    &__titre {
                         text-align: center;
                         width: 100%;
                     }
 
-                    &__input{
+                    &__input {
+                        position: relative;
+                        width: 304px;
+                        height: 40px;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid #34974d;
+                        background-color: #3aa856;
+                        margin-top: 14px;
+                        margin-right: 43px;
+
+                        &:hover {
+                            background: #34974d;
+                        }
+                        &:active {
+                            border: 1px solid #2e8644;
+                          }
+
 
                     }
 
-                    &__input2{
-                       
-                    }
                 }
-
             }
+
+
 
         }
     }
-
-
-
 }
+
+.container__article__card__haut__input, .container__article__card__haut__input__icon, .container__article__card__haut__input__text {
+    transition: all 0.3s;
+  }
+  
+  .container__article__card__haut__input .container__article__card__haut__input__text {
+    transform: translateX(30px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .container__article__card__haut__input .container__article__card__haut__input__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 104%;
+    width: 39px;
+    background-color: #34974d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container__article__card__haut__input .svg {
+    width: 30px;
+    stroke: #fff;
+  }
+  
+  .container__article__card__haut__input:hover .container__article__card__haut__input__text {
+    color: transparent;
+  }
+  
+  .container__article__card__haut__input:hover .container__article__card__haut__input__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .container__article__card__haut__input:active .container__article__card__haut__input__icon {
+    background-color: #2e8644;
+  }
