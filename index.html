@@ -30,18 +30,26 @@
             <section class="container__article__card">
                 <div class="container__article__card__haut">
                     <h2 class="container__article__card__haut__titre">To do</h2>
-                    <input id="task" class="container__article__card__haut__input" type="checkbox"> 
+                    <button id="task" class="container__article__card__haut__input" type="button">
+                        <span class="container__article__card__haut__input__text">Add Item</span>
+                        <span class="container__article__card__haut__input__icon"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg">
+                                <line y2="19" y1="5" x2="12" x1="12"></line>
+                                <line y2="12" y1="12" x2="19" x1="5"></line>
+                            </svg>
+                        </span>
+                    </button> 
                 </div>
                 <div class="container__article__card__dropzone" id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <p class="container__article__card__drop__drophere">Drop your file here</p>
                 </div>
                 <div id="inputs" class="container__article__card__inputs" draggable="true" ondragstart="drag(event)">
                     <label id="pdate">Select a date please:</label>
-                    <input type="datetime-local" name="date" id="date">
+                    <input class="container__article__card__inputs__petit" type="datetime-local" name="date" id="date">
                     <label id="ptext">Add a task:</label>
-                    <input type="text" id="text" name="text" placeholder="Add a task..." required minlength="3" maxlength="256"/>
+                    <input class="container__article__card__inputs__petit"  type="text" id="text" name="text" placeholder="Add a task..." required minlength="3" maxlength="256"/>
                     <label id="pdescription">Description:</label>
-                    <input type="text" id="description" name="description" placeholder="Describe your task..." required minlength="5" maxlength="1024"/>
+                    <input type="text" class="container__article__card__inputs__grand" id="description" name="description" placeholder="Describe your task..." required minlength="5" maxlength="1024"/>
                 </div>
                 <div class="container__article__card__add">
                 </div>

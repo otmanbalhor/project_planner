@@ -1,4 +1,5 @@
 import { btnDarkmode } from "./darkmode.js";
+//import * as datefns from "https://cdn.jsdelivr.net/npm/date-fns@3.1.0/index.min.js";
 
 //
 //DECLARATION TABLEAU LOCAL STORAGE ET CONVERSION EN JSON
