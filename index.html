@@ -31,7 +31,7 @@
                 <div class="container__article__card__haut">
                     <h2 class="container__article__card__haut__titre">To do</h2>
                     <button id="task" class="container__article__card__haut__input" type="button">
-                        <span class="container__article__card__haut__input__text">Add Item</span>
+                        <span class="container__article__card__haut__input__text">Add Task</span>
                         <span class="container__article__card__haut__input__icon"> 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg">
                                 <line y2="19" y1="5" x2="12" x1="12"></line>
@@ -42,17 +42,21 @@
                 </div>
                 <div class="container__article__card__dropzone" id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <p class="container__article__card__drop__drophere">Drop your file here</p>
+                    <div class="container__article__card__add">
+                    </div>
                 </div>
                 <div id="inputs" class="container__article__card__inputs" draggable="true" ondragstart="drag(event)">
                     <label id="pdate">Select a date please:</label>
-                    <input class="container__article__card__inputs__petit" type="datetime-local" name="date" id="date">
+                    <input class="container__article__card__inputs__petit" type="datetime-local" name="date" value="${date || ''}" id="date">
+                    <span class="container__article__card__inputs__errormsg"></span>
                     <label id="ptext">Add a task:</label>
-                    <input class="container__article__card__inputs__petit"  type="text" id="text" name="text" placeholder="Add a task..." required minlength="3" maxlength="256"/>
+                    <input class="container__article__card__inputs__petit"  type="text" id="text" name="text" value="${texte || ''}"  placeholder="Add a task..." required minlength="3" maxlength="256"/>
+                    <span class="container__article__card__inputs__errormsg"></span>
                     <label id="pdescription">Description:</label>
-                    <input type="text" class="container__article__card__inputs__grand" id="description" name="description" placeholder="Describe your task..." required minlength="5" maxlength="1024"/>
+                    <input type="text" class="container__article__card__inputs__grand" id="description" name="description" value="${description || ''}"  placeholder="Describe your task..." required minlength="5" maxlength="1024"/>
+                    <span class="container__article__card__inputs__errormsg"></span>
                 </div>
-                <div class="container__article__card__add">
-                </div>
+                
             </section>
             <section class="container__article__card">
                 <div class="container__article__card__haut">
@@ -77,5 +81,7 @@
     <script type="module" defer src="assets/js/script.js"></script>
     <script defer src="assets/js/drop.js"></script>
 
+
+   
 </body>
 </html>
