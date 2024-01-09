@@ -45,19 +45,21 @@ function displayItems() {
     let objet = "";
 
     itemsArray.forEach((date, task, description) => {
-        objet += `<div id="item" class="item" draggable="true" ondragstart="drag(event)">
+        objet += `
+        <div id="item" class="item" draggable="true" ondragstart="drag(event)">
         <div class="item__input-controller">
             <label class="item__input-controller__label">Select a date please:</label>
             <input class="item__input-controller__datetime" type="datetime-local" name="date" value="${date || ''}" id="date">
-            <label item__input-controller__label>Add a task:</label>
-            <input input class="item__input-controller__text type="text" id="text" name="text" placeholder="Add a task..."value="${task || ''}" required minlength="3" maxlength="256"/>
+            <label class="item__input-controller__label">Add a task:</label>
+            <input class="item__input-controller__text" type="text" id="text" name="text" placeholder="Add a task..."value="${task || ''}" required minlength="3" maxlength="256"/>
             <label item__input-controller__label>Description:</label>
-            <input input class="item__input-controller__description type="text" id="description" name="description" placeholder="Describe your task..." value="${description || ''}" required minlength="5" maxlength="1024"/>
+            <input class="item__input-controller__description" type="text" id="description" name="description" placeholder="Describe your task..." value="${description || ''}" required minlength="5" maxlength="1024"/>
+        </div>
+        <div id="delete" class="item__delete" draggable="true" ondragstart="drag(event)">
+            <button class="item__delete__btn">Delete</button>
         </div>
     </div>
-    <div id="delete" class="item__delete" draggable="true" ondragstart="drag(event)">
-        <button class="item__delete__btn">Delete</button>
-    </div>`
+    `
     });
 
     const add = document.querySelector(".container__article__card__add");
