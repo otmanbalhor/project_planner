@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/scss/style.css">
     <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');</style>
-    <title>Document</title>
+    <title>Project Planner</title>
 </head>
 <body>
     <header class="header">
@@ -19,12 +19,12 @@
     </header>
 
     <main class="container">
-        <div class="container__tri">
-            <button type="button" class="container__tri__btn">All</button>
-            <button type="button" class="container__tri__btn">To do</button>
-            <button type="button" class="container__tri__btn">In progress</button>
-            <button type="button" class="container__tri__btn">Done</button>
-        </div>
+        <nav class="container__tri">
+            <button id="all" type="button" class="container__tri__btn">All</button>
+            <button id="to do" type="button" class="container__tri__btn">To do</button>
+            <button id="doing" type="button" class="container__tri__btn">Doing</button>
+            <button id="done" type="button" class="container__tri__btn">Done</button>
+        </nav>
 
         <article class="container__article">
             <section class="container__article__card">
@@ -56,8 +56,7 @@
             </section>
             <section class="container__article__card">
                 <div class="container__article__card__haut">
-                    <h2 class="container__article__card__haut__titre">Doing</h2>
-                    <input class="container__article__card__haut__input2" type="checkbox"> 
+                    <h2 class="container__article__card__haut__titre">Doing</h2> 
                 </div>
                 <div class="container__article__card__dropzone" id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <p class="container__article__card__drop__drophere">Drop your file here</p>
@@ -67,7 +66,6 @@
             <section class="container__article__card">
                 <div class="container__article__card__haut">
                    <h2 class="container__article__card__haut__titre">Done</h2> 
-                   <input class="container__article__card__haut__input" type="checkbox"> 
                 </div>
                 <div class="container__article__card__dropzone" id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <p class="container__article__card__drop__drophere">Drop your file here</p>

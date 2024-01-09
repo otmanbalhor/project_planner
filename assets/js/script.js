@@ -1,4 +1,5 @@
 import { btnDarkmode } from "./darkmode.js";
+import { filter } from "./filtre.js";
 //import * as datefns from "https://cdn.jsdelivr.net/npm/date-fns@3.1.0/index.min.js";
 
 //
@@ -28,7 +29,7 @@ task.addEventListener('click', function () {
 
     localStorage.setItem("items", JSON.stringify(itemsArray));
     location.reload();
-    
+
     //
     //RECHARGE LA PAGE
     //
@@ -59,8 +60,8 @@ function displayItems() {
     </div>`
     });
 
-    const add=document.querySelector(".container__article__card__add");
-    add.innerHTML=objet;
+    const add = document.querySelector(".container__article__card__add");
+    add.innerHTML = objet;
 
     const deleteButtons = document.querySelectorAll('.item__delete__btn');
     deleteButtons.forEach(button => {
@@ -75,23 +76,46 @@ function activateDelete() {
     let supprimer = document.querySelectorAll(".item__delete__btn");
 
     supprimer.forEach((deleteBtn, i) => {
-        deleteBtn.addEventListener('click', () => { 
+        deleteBtn.addEventListener('click', () => {
             itemsArray.splice(i, 1);
             localStorage.setItem("items", JSON.stringify(itemsArray))
             location.reload();
-         })
+        })
 
     });
 
 }
 
-document.addEventListener('DOMContentLoaded',function(){
+
+document.addEventListener('DOMContentLoaded', function () {
 
     displayItems();
     //
     //ON SELECTIONNE NAV POUR LE LIER A SON ENFANT BTN DARKMODE
     //
     const nav = document.querySelector('nav');
+
+    const all = document.getElementById('all');
+    const toDo = document.getElementById('to do');
+    const doing = document.getElementById('doing');
+    const done = document.getElementById('done');
+
+    all.addEventListener('click',function(){
+
+        filter('All');
+    });
+
+    toDo.addEventListener('click',function(){
+        filter('To do');
+    });
+
+    doing.addEventListener('click',function(){
+        filter('Doing');
+    });
+
+    done.addEventListener('click',function(){
+        filter('Done');
+    });
 
     nav.append(btnDarkmode);
 });
