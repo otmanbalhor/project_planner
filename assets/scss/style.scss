@@ -4,6 +4,13 @@
 
 body{
 
+    background-color: #F9F7F7;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #393E46;
+
+
     .container{
 
         height: 100vh;
@@ -14,6 +21,25 @@ body{
             justify-content: center;
             gap:15px;
             margin-bottom: 3%;
+
+            &__btn {
+                font-family: 'Roboto';
+                text-transform: uppercase;
+                font-size: 10px;
+                background-color: #393E46;
+                color: #F9F7F7;
+                border-style: none;
+                height: 38px;
+                width: 70px;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: #FF9800; 
+                    transition: 0.2s;
+                }
+            }
+
+
         }
 
         &__article{
@@ -28,18 +54,25 @@ body{
             gap: 15px;
 
             &__card{
-                border:1px solid black;
-                border-radius: 10%;
                 width: 100%;
                 max-width: 300px;
-                background-color: blue;
+                background-color: #e0dcdc;
                 height: 100%;
+                box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.1);
 
                 &__inputs {
+                    font-family: "Georgia";
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
                     width: 100%;
+                    padding-left: 20px;
+                    font-size: 12px;
+                    color: #393E46;
+                    // margin-right: 60px; dans enfant de inputs
+                    input {
+                        margin-right: 50px;
+                    }
                 }
 
                 &__haut{
@@ -51,7 +84,7 @@ body{
                     }
 
                     &__input{
-                       
+
                     }
 
                     &__input2{
