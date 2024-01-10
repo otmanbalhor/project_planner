@@ -1,4 +1,7 @@
 
+//
+// filtre pour les cartes (to do, doing, done)
+//
 export function filter(categorie) {
 
     const cards = document.querySelectorAll('.container__article__card');
