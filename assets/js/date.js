@@ -1,6 +1,6 @@
 import * as datefns from 'https://cdn.jsdelivr.net/npm/date-fns@2.24.0/esm/index.js';
 
-
+//FONCTION DAY REMAINING OTMAN
 export function dayRemaining() {
 
     const inputDateValue = document.getElementById('inputDate').value;
