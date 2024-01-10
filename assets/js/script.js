@@ -55,19 +55,17 @@ function displayItems() {
 
     itemsArray.forEach((date, task, description) => {
         objet += `
-        <div id="item" class="item" draggable="true" ondragstart="drag(event)">
-        <div class="item__input-controller">
-            <label class="item__input-controller__label">Select a date please:</label>
-            <input class="item__input-controller__datetime" type="datetime-local" name="date" value="${date || ''}" id="date">
-            <p class="item__input-controller__dayRemaining"></p>
-            <label class="item__input-controller__label">Add a task:</label>
-            <input class="item__input-controller__text" type="text" id="text" name="text" placeholder="Add a task..."value="${task || ''}" required minlength="3" maxlength="256"/>
-            <label item__input-controller__label>Description:</label>
-            <input class="item__input-controller__description" type="text" id="description" name="description" placeholder="Describe your task..." value="${description || ''}" required minlength="5" maxlength="1024"/>
-        </div>
-        <div id="delete" class="item__delete" draggable="true" ondragstart="drag(event)">
-            <button class="item__delete__btn">Delete</button>
-        </div>
+    <div id="item" class="item" draggable="true" ondragstart="drag(event)">
+            <div class="item__input-controller">
+                <label class="item__input-controller__label">Select a date please:</label>
+                <input class="item__input-controller__datetime" type="datetime-local" name="date" value="${date || ''}" id="date">
+                <p class="item__input-controller__dayRemaining"></p>
+                <label class="item__input-controller__label">Add a task:</label>
+                <input class="item__input-controller__text" type="text" id="text" name="text" placeholder="Add a task..."value="${task || ''}" required minlength="3" maxlength="256"/>
+                <label item__input-controller__label>Description:</label>
+                <input class="item__input-controller__description" type="text" id="description" name="description" placeholder="Describe your task..." value="${description || ''}" required minlength="5" maxlength="1024"/>
+                <button class="item__delete__btn">Delete</button>
+             </div>
     </div>
     `
     });
@@ -129,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
         filter('Done');
     });
 
-    setInterval(dayRemaining, 3000);
+    setInterval(dayRemaining, 1000);
 
     toggleSwitch.append(switchLabel);
     switchLabel.append(btnDarkmode);

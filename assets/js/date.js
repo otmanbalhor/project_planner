@@ -30,25 +30,44 @@ export function dayRemaining() {
         //
         //ON RECUPERE LES DONNEES DEPUIS LE LOCAL STORAGE
         //
-        const fin = datefns.addDays(new Date(), 1);
-        const daysDifferenceAdd = datefns.differenceInDays(selectedDateAdd, new Date(fin));
+        const fin = datefns.addDays(new Date(), 0);
+        const finito = datefns.addDays(new Date(),1);
         const daysDifference = datefns.differenceInDays(selectedDate, new Date(fin));
-        console.log(daysDifference);
+        const daysDif = datefns.differenceInDays(selectedDate, new Date(finito));
+        const daysDifferenceAdd = datefns.differenceInDays(selectedDateAdd, new Date(fin));
+        
 
         const sentence = document.querySelector('.container__article__card__inputs__dayRemaining');
         const sentenceAdd = document.querySelectorAll('.item__input-controller__dayRemaining');
 
-        if (daysDifference > 0 || daysDifferenceAdd > 0) {
+        if (daysDifference > 0) {
             sentence.textContent = `${daysDifference} days remaining`;
-            sentenceAdd.textContent = `${daysDifferenceAdd} days remaining`;
-        } else if (daysDifference === 0 || daysDifferenceAdd === 0) {
-            sentence.textContent = `the task must end today`;
-            sentenceAdd.textContent = `the task must end today`;
-        } else {
-            sentence.textContent = `you are ${Math.abs(daysDifference)} days late`;
-            sentenceAdd.textContent = `you are ${Math.abs(daysDifferenceAdd)} days late`;
         }
        
+        else if (daysDifference === 0) {
+            sentence.textContent = `The task must end today`;
+        } 
+       
+        else
+        {
+            sentence.textContent = `You are ${Math.abs(daysDif)} days late`;
+        } 
+        
+
+        sentenceAdd.forEach(sentAdd => {
+            if (daysDifferenceAdd > 0){
+                sentAdd.textContent = `${daysDifferenceAdd} days remaining`;
+            }
+            
+            else if(daysDifferenceAdd === 0){
+                sentAdd.textContent = `The task must end today`;
+            }
+            else{
+                sentAdd.textContent = `You are ${Math.abs(daysDifferenceAdd)} days late`;
+            }
+        });
+       
+
     }
 
 }
