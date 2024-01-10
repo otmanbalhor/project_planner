@@ -10,6 +10,9 @@
 <body>
     <header class="header">
         <nav id="nav" class="header__nav">
+            <div class="header__nav__div">
+                
+            </div>
            
         </nav>
 
@@ -51,12 +54,12 @@
                     <span class="container__article__card__inputs__errormsg" id="errorDate"></span>
                     <p class="container__article__card__inputs__dayRemaining"></p>
                     <label id="ptext">Add a task:</label>
-                    <input class="container__article__card__inputs__petit"  type="text" id="text" name="text" value="${texte || ''}"  placeholder="Add a task..." required minlength="3" maxlength="256"/>
+                    <input class="container__article__card__inputs__petit"  type="text" id="text" name="text"  placeholder="Add a task..." required minlength="3" maxlength="256"/>
                     <span class="container__article__card__inputs__errormsg" id="errorTask"></span>
                     <label id="pdescription">Description:</label>
-                    <input type="text" class="container__article__card__inputs__grand" id="description" name="description" value="${description || ''}"  placeholder="Describe your task..." required minlength="5" maxlength="1024"/>
+                    <input type="text" class="container__article__card__inputs__grand" id="description" name="description"  placeholder="Describe your task..." required minlength="5" maxlength="1024"/>
                     <span class="container__article__card__inputs__errormsg" id="errorDescription"></span>
-                    <button type="button" id="buttonAdd" class="container__article__card__inputs__btnAdd">Send task</button>
+                    <!--<button type="button" id="buttonAdd" class="container__article__card__inputs__btnAdd">Send task</button>-->
                 </div>
                 
             </section>

@@ -1,4 +1,4 @@
-import { btnDarkmode } from "./darkmode.js";
+import { switchLabel,btnDarkmode, slider } from "./darkmode.js";
 import { dayRemaining } from "./date.js";
 import { filter } from "./filtre.js";
 
@@ -6,29 +6,6 @@ import { filter } from "./filtre.js";
 //DECLARATION TABLEAU LOCAL STORAGE ET CONVERSION EN JSON
 //
 const itemsArray = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : [];
-
-
-
-
-//
-//VA CHERCHER BOUTON SEND
-//
-
-
-const btnAdd = document.getElementById('buttonAdd');
-
-btnAdd.addEventListener('click', function () {
-    
-    const inputs = document.getElementById('inputs');
-
-    itemsArray.push(inputs.value);
-
-    localStorage.setItem("items", JSON.stringify(itemsArray));
-
-    location.reload();
-});
-
-
 
 
 const task = document.getElementById('task');
@@ -39,15 +16,27 @@ const task = document.getElementById('task');
 task.addEventListener('click', function () {
 
     //
-    //VA CHERCHER LA ZONE DE SAISIE
+    //VA CHERCHER LES ZONES DE SAISIES
     //
-    const item = document.querySelector('#text');
+    const itemDate = document.querySelector('#inputDate');
+    const itemText = document.querySelector('#text');
+    const itemDescri = document.querySelector('#description');
+    
+    
+    const saisis = {
+        date:itemDate,
+        text:itemText,
+        description:itemDescri,
+    };
+    
+    //
+    //MET LES SAISIES USER DANS ITEMSARRAY(LOCALSTORAGE)
+    //
+    itemsArray.push(saisis.value);
 
     //
-    //MET LE SAISIE USER DANS ITEMSARRAY(LOCALSTORAGE)
+    // STOCKE LES DONNÉES MISES À JOUR DANS LE LOCAL STORAGE
     //
-    itemsArray.push(item.value);
-
     localStorage.setItem("items", JSON.stringify(itemsArray));
 
     //
@@ -70,6 +59,7 @@ function displayItems() {
         <div class="item__input-controller">
             <label class="item__input-controller__label">Select a date please:</label>
             <input class="item__input-controller__datetime" type="datetime-local" name="date" value="${date || ''}" id="date">
+            <p class="item__input-controller__dayRemaining"></p>
             <label class="item__input-controller__label">Add a task:</label>
             <input class="item__input-controller__text" type="text" id="text" name="text" placeholder="Add a task..."value="${task || ''}" required minlength="3" maxlength="256"/>
             <label item__input-controller__label>Description:</label>
@@ -115,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //
     //ON SELECTIONNE NAV POUR LE LIER A SON ENFANT BTN DARKMODE
     //
-    const nav = document.querySelector('nav');
+    const toggleSwitch = document.querySelector('.header__nav__div');
 
     const all = document.getElementById('all');
     const toDo = document.getElementById('to do');
@@ -139,9 +129,10 @@ document.addEventListener('DOMContentLoaded', function () {
         filter('Done');
     });
 
-    setInterval(dayRemaining, 10000);
+    setInterval(dayRemaining, 3000);
 
-    nav.append(btnDarkmode);
+    toggleSwitch.append(switchLabel);
+    switchLabel.append(btnDarkmode);
+    switchLabel.append(slider);
 
-    console.log(itemsArray);
 });
