@@ -6,11 +6,71 @@ body .header__nav {
   background-color: #222831;
   height: 5vh;
   max-height: 40px;
+  display: flex;
+  justify-content: end;
+}
+body .header__nav__div {
+  position: relative;
+  width: 75px;
+  height: 10px;
+  --light: #daaf2e;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+  margin-right: 3%;
+  height: 100%;
+}
+body .header__nav__div__img {
+  height: 100%;
+  margin-right: 1%;
+  cursor: pointer;
+}
+body .header__nav__div__label {
+  position: absolute;
+  width: 85%;
+  height: 30px;
+  background-color: #c7c3c3;
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid #fff;
+}
+body .header__nav__div__label__input {
+  position: absolute;
+  display: none;
+}
+body .header__nav__div__label__span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+body .header__nav__div__label__span::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  transition: 0.3s;
 }
 body .header__haut {
   display: flex;
   justify-content: center;
 }
+.header__nav__div__label__input:checked ~ .header__nav__div__label__span {
+  background-color: rgb(60, 60, 60);
+  border: 3px solid #daaf2e;
+}
+.header__nav__div__label__input:checked ~ .header__nav__div__label__span::before {
+  transform: translateX(40px);
+  background-color: #daaf2e;
+  box-shadow: none;
+}
+
 body {
   background-color: #F9F7F7;
   font-family: "Roboto", sans-serif;
