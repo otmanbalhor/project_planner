@@ -30,11 +30,11 @@ body {
                 border-style: none;
                 height: 38px;
                 width: 70px;
-                border-radius: 5px;
+                border-radius: 0px;
 
                 &:hover {
                     // Style des boutons au survol de la souris
-                    background-color: #FF9800;
+                    background-color: #535A66;
                     transition: 0.2s;
                 }
             }
@@ -61,6 +61,7 @@ body {
                 height: 100%;
                 box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.1);
                 overflow-y: auto;
+                overflow-x: hidden;
 
                 &__haut {
                     // Partie par rapport au titre de la box
@@ -85,6 +86,8 @@ body {
                         margin-top: 14px;
                         margin-right: 43px;
 
+
+
                         &:hover {
                             background: #34974d;
                         }
@@ -104,83 +107,98 @@ body {
                     margin-bottom: 7%;
                     margin-left: 7%;
                     margin-right: 7%;
-                    border: dashed 2px #393E46;
+                    //border: dashed 2px #393E46;
                     text-align: center;
+
                 }
 
-                &__inputs {
-                    // Style de l'input
-                    font-family: "Georgia";
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                    width: 100%;
-                    padding-left: 20px;
-                    font-size: 12px;
-                    color: #393E46;
-
-                    &__grand {
-                        // Sous-style de l'input description
-                        padding-bottom: 25%;
-                        margin-right: 18%;
-                    }
-
-                    &__petit {
-                        // Sous-style des deux autres inputs
-                        margin-right: 18%;
-                    }
-                }
                 &__add {
                     font-family: "Georgia";
                     font-size: 12px;
                     color: #393E46;
                     padding-left: 20px;
                     padding-top: 20px;
+                    margin: 0px;
+                }
             }
-
-
-
         }
     }
-}
 
-.container__article__card__haut__input,
-.container__article__card__haut__input__icon,
-.container__article__card__haut__input__text {
-    transition: all 0.3s;
-}
+    .item {
 
-.container__article__card__haut__input .container__article__card__haut__input__text {
-    transform: translateX(30px);
-    color: #fff;
-    font-weight: 600;
-}
+        margin: 0px;
 
-.container__article__card__haut__input .container__article__card__haut__input__icon {
-    position: absolute;
-    transform: translateX(109px);
-    height: 104%;
-    width: 39px;
-    background-color: #34974d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        // Normalement c'est un enfant de "add", mais là c'est juste item__input-controller, il faudrait add__item__input-controller
+        &__input-controller {
+            background-color: #393E46;
+            color: #F9F7F7;
+            text-align: left;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            margin-left: -21px;
+            padding: 15px;
 
-.container__article__card__haut__input .svg {
-    width: 30px;
-    stroke: #fff;
-}
+            &__text {
+                margin-top: 5px;
+                margin-bottom: 15px;
+            }
+            
+            &__datetime {
+                margin-top: 5px;
+            }
+            
+            &__description {
+                margin-top: 5px;
+            }
+        }
+        &__delete {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        &__btn {
+            font-family: 'roboto';
+            color: red;
+        }
+    }
 
-.container__article__card__haut__input:hover .container__article__card__haut__input__text {
-    color: transparent;
-}
+    .container__article__card__haut__input,
+    .container__article__card__haut__input__icon,
+    .container__article__card__haut__input__text {
+        transition: all 0.3s;
+    }
 
-.container__article__card__haut__input:hover .container__article__card__haut__input__icon {
-    width: 148px;
-    transform: translateX(0);
-}
+    .container__article__card__haut__input .container__article__card__haut__input__text {
+        transform: translateX(30px);
+        color: #fff;
+        font-weight: 600;
+    }
 
-.container__article__card__haut__input:active .container__article__card__haut__input__icon {
-    background-color: #2e8644;
-} }
+    .container__article__card__haut__input .container__article__card__haut__input__icon {
+        position: absolute;
+        transform: translateX(109px);
+        height: 104%;
+        width: 39px;
+        background-color: #34974d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container__article__card__haut__input .svg {
+        width: 30px;
+        stroke: #fff;
+    }
+
+    .container__article__card__haut__input:hover .container__article__card__haut__input__text {
+        color: transparent;
+    }
+
+    .container__article__card__haut__input:hover .container__article__card__haut__input__icon {
+        width: 148px;
+        transform: translateX(0);
+    }
+
+    .container__article__card__haut__input:active .container__article__card__haut__input__icon {
+        background-color: #2e8644;
+    }
+}
