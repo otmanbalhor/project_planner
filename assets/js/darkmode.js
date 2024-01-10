@@ -28,9 +28,9 @@ btnDarkmode.addEventListener('change',function(){
 
     if(btnDarkmode.checked){
         document.body.style.backgroundColor='rgb(50,50,50)';
-        document.body.style.color='rgb(255,255,255)';
+        document.body.style.color='rgb(249,247,247)';
         document.body.style.transition='0.5s';
-        navi.style.backgroundColor='rgb(255,255,255)';
+        navi.style.backgroundColor='rgb(249,247,247)';
         Array.from(card).forEach(carte => {
             carte.style.backgroundColor='rgb(70,70,70)'; 
         });

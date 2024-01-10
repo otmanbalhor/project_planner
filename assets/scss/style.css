@@ -37,10 +37,10 @@ body .container__tri__btn {
   border-style: none;
   height: 38px;
   width: 70px;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 body .container__tri__btn:hover {
-  background-color: #FF9800;
+  background-color: #535A66;
   transition: 0.2s;
 }
 body .container__article {
@@ -60,6 +60,7 @@ body .container__article__card {
   height: 100%;
   box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 body .container__article__card__haut {
   display: flex;
@@ -91,25 +92,7 @@ body .container__article__card__dropzone {
   margin-bottom: 7%;
   margin-left: 7%;
   margin-right: 7%;
-  border: dashed 2px #393E46;
   text-align: center;
-}
-body .container__article__card__inputs {
-  font-family: "Georgia";
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  padding-left: 20px;
-  font-size: 12px;
-  color: #393E46;
-}
-body .container__article__card__inputs__grand {
-  padding-bottom: 25%;
-  margin-right: 18%;
-}
-body .container__article__card__inputs__petit {
-  margin-right: 18%;
 }
 body .container__article__card__add {
   font-family: "Georgia";
@@ -117,6 +100,37 @@ body .container__article__card__add {
   color: #393E46;
   padding-left: 20px;
   padding-top: 20px;
+  margin: 0px;
+}
+body .item {
+  margin: 0px;
+}
+body .item__input-controller {
+  background-color: #393E46;
+  color: #F9F7F7;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: -21px;
+  padding: 15px;
+}
+body .item__input-controller__text {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+body .item__input-controller__datetime {
+  margin-top: 5px;
+}
+body .item__input-controller__description {
+  margin-top: 5px;
+}
+body .item__delete {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body .item__btn {
+  font-family: "roboto";
+  color: red;
 }
 body .container__article__card__haut__input,
 body .container__article__card__haut__input__icon,
