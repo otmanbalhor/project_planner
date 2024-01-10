@@ -47,14 +47,16 @@
                 </div>
                 <div id="inputs" class="container__article__card__inputs" draggable="true" ondragstart="drag(event)">
                     <label id="pdate">Select a date please:</label>
-                    <input class="container__article__card__inputs__petit" type="datetime-local" name="date" value="${date || ''}" id="date">
-                    <span class="container__article__card__inputs__errormsg"></span>
+                    <input class="container__article__card__inputs__petit" type="datetime-local" name="date" id="inputDate">
+                    <span class="container__article__card__inputs__errormsg" id="errorDate"></span>
+                    <p class="container__article__card__inputs__dayRemaining"></p>
                     <label id="ptext">Add a task:</label>
                     <input class="container__article__card__inputs__petit"  type="text" id="text" name="text" value="${texte || ''}"  placeholder="Add a task..." required minlength="3" maxlength="256"/>
-                    <span class="container__article__card__inputs__errormsg"></span>
+                    <span class="container__article__card__inputs__errormsg" id="errorTask"></span>
                     <label id="pdescription">Description:</label>
                     <input type="text" class="container__article__card__inputs__grand" id="description" name="description" value="${description || ''}"  placeholder="Describe your task..." required minlength="5" maxlength="1024"/>
-                    <span class="container__article__card__inputs__errormsg"></span>
+                    <span class="container__article__card__inputs__errormsg" id="errorDescription"></span>
+                    <button type="button" id="buttonAdd" class="container__article__card__inputs__btnAdd">Send task</button>
                 </div>
                 
             </section>

@@ -1,15 +1,36 @@
 import { btnDarkmode } from "./darkmode.js";
+import { dayRemaining } from "./date.js";
 import { filter } from "./filtre.js";
-//import * as datefns from "https://cdn.jsdelivr.net/npm/date-fns@3.1.0/index.min.js";
 
 //
 //DECLARATION TABLEAU LOCAL STORAGE ET CONVERSION EN JSON
 //
 const itemsArray = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : [];
 
+
+
+
 //
 //VA CHERCHER BOUTON SEND
 //
+
+
+const btnAdd = document.getElementById('buttonAdd');
+
+btnAdd.addEventListener('click', function () {
+    
+    const inputs = document.getElementById('inputs');
+
+    itemsArray.push(inputs.value);
+
+    localStorage.setItem("items", JSON.stringify(itemsArray));
+
+    location.reload();
+});
+
+
+
+
 const task = document.getElementById('task');
 
 //
@@ -28,7 +49,6 @@ task.addEventListener('click', function () {
     itemsArray.push(item.value);
 
     localStorage.setItem("items", JSON.stringify(itemsArray));
-    location.reload();
 
     //
     //RECHARGE LA PAGE
@@ -102,22 +122,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const doing = document.getElementById('doing');
     const done = document.getElementById('done');
 
-    all.addEventListener('click',function(){
+    all.addEventListener('click', function () {
 
         filter('All');
     });
 
-    toDo.addEventListener('click',function(){
+    toDo.addEventListener('click', function () {
         filter('To do');
     });
 
-    doing.addEventListener('click',function(){
+    doing.addEventListener('click', function () {
         filter('Doing');
     });
 
-    done.addEventListener('click',function(){
+    done.addEventListener('click', function () {
         filter('Done');
     });
 
+    setInterval(dayRemaining, 10000);
+
     nav.append(btnDarkmode);
+
+    console.log(itemsArray);
 });
