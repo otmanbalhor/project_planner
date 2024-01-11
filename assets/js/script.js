@@ -115,11 +115,18 @@ function displayItems() {
 function activateDelete() {
     let supprimer = document.querySelectorAll(".item__delete__btn");
 
+    
     supprimer.forEach((deleteBtn, i) => {
-        deleteBtn.addEventListener('click', () => {
+        deleteBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            let itemContainer = deleteBtn.parentNode;
+            itemContainer.remove();
+
             itemsArray.splice(i, 1);
+
             localStorage.setItem("items", JSON.stringify(itemsArray))
-            location.reload();
+            
         })
 
     });
@@ -211,8 +218,6 @@ function dayRemaining(sentenceElement, i) {
 }
 
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
     //
     //ON SELECTIONNE NAV POUR LE LIER A SON ENFANT BTN DARKMODE
@@ -261,8 +266,9 @@ document.addEventListener('DOMContentLoaded', function () {
     switchLabel.append(btnDarkmode);
     switchLabel.append(slider);
 
-    const nav = document.querySelector('header__nav');
-    const divCheck = ElementClass('div','popup');
+    const nav = document.querySelector('.header__nav');
+    const divCheck = document.createElement('div')
+    divCheck.classList.add('popup');
     nav.append(divCheck);
     divCheck.append(menu);
     divCheck.append(popup);
