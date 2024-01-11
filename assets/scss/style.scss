@@ -22,20 +22,28 @@ body {
 
             &__btn {
                 // Style des boutons
-                font-family: 'Roboto';
+                font-family: 'Roboto','sans-serif';
                 text-transform: uppercase;
-                font-size: 10px;
+                font-size: 12px;
                 background-color: #393E46;
-                color: #F9F7F7;
-                border-style: none;
-                height: 38px;
-                width: 70px;
-                border-radius: 0px;
+                color: #FFF;
+                border: none;
+                height: 40px;
+                width: 80px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: transform 0.2s ease;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
                 &:hover {
                     // Style des boutons au survol de la souris
-                    background-color: #535A66;
-                    transition: 0.2s;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                    transform: translateY(-2px);
+                }
+
+                &:active{
+                    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+                    transform: translateY(2px);
                 }
             }
 
@@ -125,10 +133,9 @@ body {
     }
 
     .item {
-
         margin: 0px;
 
-        // Normalement c'est un enfant de "add", mais là c'est juste item__input-controller, il faudrait add__item__input-controller
+        // Normalement c'est un enfant de "add", mais là c'est juste iteminput-controller, il faudrait additeminput-controller
         &__input-controller {
             background-color: #393E46;
             color: #F9F7F7;
@@ -141,23 +148,39 @@ body {
             &__text {
                 margin-top: 5px;
                 margin-bottom: 15px;
+                width: 221px;
             }
-            
+
             &__datetime {
                 margin-top: 5px;
+                width: 225px;
             }
-            
+
             &__description {
                 margin-top: 5px;
+                width: 221px;
+                padding-bottom: 50px;
             }
         }
-        &__delete {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        &__btn {
-            font-family: 'roboto';
-            color: red;
+        &__delete__btn {
+            background-color: #C0392B; // Un rouge profond
+            color: #F9F7F7; // Texte blanc pour un bon contraste
+            border: none; // Optionnel, selon le style souhaité
+            padding: 10px 15px; // Ajustez selon la taille désirée
+            border-radius: 5px; // Pour des coins arrondis
+            cursor: pointer; // Changement de curseur pour indiquer qu'il s'agit d'un bouton
+            transition: background-color 0.3s ease; // Transition douce pour les interactions
+            margin-left: 77px;
+            margin-top: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: #E74C3C; // Une nuance légèrement plus claire pour l'effet de survol
+            }
         }
     }
 

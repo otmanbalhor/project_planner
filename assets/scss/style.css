@@ -89,19 +89,26 @@ body .container__tri {
   margin-bottom: 3%;
 }
 body .container__tri__btn {
-  font-family: "Roboto";
+  font-family: "Roboto", "sans-serif";
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 12px;
   background-color: #393E46;
-  color: #F9F7F7;
-  border-style: none;
-  height: 38px;
-  width: 70px;
-  border-radius: 0px;
+  color: #FFF;
+  border: none;
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 body .container__tri__btn:hover {
-  background-color: #535A66;
-  transition: 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+body .container__tri__btn:active {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
 }
 body .container__article {
   display: flex;
@@ -177,20 +184,35 @@ body .item__input-controller {
 body .item__input-controller__text {
   margin-top: 5px;
   margin-bottom: 15px;
+  width: 221px;
 }
 body .item__input-controller__datetime {
   margin-top: 5px;
+  width: 225px;
 }
 body .item__input-controller__description {
   margin-top: 5px;
+  width: 221px;
+  padding-bottom: 50px;
 }
-body .item__delete {
-  margin-top: 10px;
-  margin-bottom: 10px;
+body .item__delete__btn {
+  background-color: #C0392B;
+  color: #F9F7F7;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 77px;
+  margin-top: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-body .item__btn {
-  font-family: "roboto";
-  color: red;
+body .item__delete__btn:hover {
+  background-color: #E74C3C;
 }
 body .container__article__card__haut__input,
 body .container__article__card__haut__input__icon,
