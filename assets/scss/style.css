@@ -4,7 +4,7 @@ body {
 }
 body .header__nav {
   background-color: #222831;
-  height: 5vh;
+  height: 7vh;
   max-height: 40px;
   display: flex;
   justify-content: end;
@@ -139,7 +139,7 @@ body .container__article__card__haut__titre {
 body .container__article__card__haut__input {
   position: relative;
   width: 304px;
-  height: 40px;
+  height: 41px;
   cursor: pointer;
   display: flex;
   align-items: center;
