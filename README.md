@@ -39,7 +39,7 @@
 
 * **Sauvegarde des tâches :** Toutes les tâches sont automatiquement sauvegardées dans le navigateur à l'aide de LocalStorage, assurant ainsi leur persistance même en cas de rafraîchissement de la page.
 
-## Fonctionnalités Avancées 🛠️
+## Fonctionnalités Avancées 🌟
 
 * **Glisser-Déposer des Tâches :** Les tâches peuvent être déplacées d'une colonne à une autre grâce à un système intuitif de glisser-déposer, offrant ainsi une expérience utilisateur fluide et interactive.
 
