@@ -39,24 +39,24 @@
 
 * **Sauvegarde des tâches :** Toutes les tâches sont automatiquement sauvegardées dans le navigateur à l'aide de LocalStorage, assurant ainsi leur persistance même en cas de rafraîchissement de la page.
 
-## Fonctionnalités Avancées
+## Fonctionnalités Avancées 🛠️
 
 * **Glisser-Déposer des Tâches :** Les tâches peuvent être déplacées d'une colonne à une autre grâce à un système intuitif de glisser-déposer, offrant ainsi une expérience utilisateur fluide et interactive.
 
 * **Darkmode :**  l'application dispose également d'un mode sombre pour offrir une expérience visuelle agréable dans des conditions de faible luminosité.
 
-## Technologies Utilisées
+## Technologies Utilisées 👨‍💻
 * HTML, CSS, JavaScript pour la création de l'interface utilisateur et la manipulation du DOM.
 
 * Date-fns pour la manipulation des dates et le calcul du temps restant.
 
-## Comment Utiliser
+## Comment Utiliser ❓
 
 * Clonez ce repository sur votre machine locale.
 * Ouvrez le fichier index.html dans votre navigateur web.
 * Commencez à créer, mettre à jour et organiser vos tâches selon vos besoins !
 
-## Objectifs d'apprentissage
+## Objectifs d'apprentissage 🎯
 
 * Manipulation dynamique du DOM
 * Gestion des dates
